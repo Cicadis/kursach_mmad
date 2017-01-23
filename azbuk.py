@@ -7,6 +7,9 @@ def azb(s, t_a):
     dla=[]
     dj=0
     ind_r=0
+    dr=0
+    indv=[]
+    bv=0
     for u in s:
         di=di+1
     dls.append(di)
@@ -21,20 +24,25 @@ def azb(s, t_a):
             dj=dj+1
         dla.append(dj)
         dj=0
-        if  (ind/b)>=0.6:
+        if  (ind/b)>=0.75 and (ind/b)<=1:
             r.append(1)
         else:
             r.append(0)
         ind=0
         b=0
+    #print(r)
+    
+    for o in r:
+        dr=dr+1
     for o in r:
         if o==1:
-            if dla[ind_r]==dls[0] or dla[ind_r]==(dls[0]+1):
-                print("katakana")
+            #print(t_a[ind_r])
+            if dla[ind_r]==dls[0] or dla[ind_r]==(dls[0]+1) :
+                #print("katakana")
                 return 1
-            else:
-                print("hirogana")
-                return 2
+        if o==dr:
+           # print("hirogana")
+            return 2
         ind_r=ind_r+1
-    print("hirogana")
+   # print("hirogana")
     return 2
