@@ -46,3 +46,4 @@ def azb(s, t_a):
         ind_r=ind_r+1
    # print("hirogana")
     return 2
+#12345

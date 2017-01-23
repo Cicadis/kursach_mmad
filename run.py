@@ -188,3 +188,4 @@ print((v/41)*100,"%")
 #    else:
 #        hir=hir+1
 #print(kat,hir)
+#123456
